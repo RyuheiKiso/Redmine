@@ -1,0 +1,4 @@
+<!-- チケット画面に「Databricksに送信」ボタンを追加 -->
+<% if User.current.allowed_to?(:send_to_databricks, @project) %>
+  <%= button_to 'Databricksに送信', send_to_databricks_path(issue_id: @issue.id), method: :post, class: 'button' %>
+<% end %>
