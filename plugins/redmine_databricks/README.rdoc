@@ -1,0 +1,47 @@
+= redmine_databricks
+
+== 機能設計書
+
+=== 概要
+redmine_databricks プラグインは、Redmine プラットフォームにおいて Databricks の統合を提供します。このプラグインは、Redmine チケットの情報を Databricks に送信し、処理結果を受信する機能を中心に設計されています。
+
+=== 主な機能
+1. **Databricks との連携**
+   - Redmine チケット情報を Databricks に送信。
+   - Databricks での処理結果を受信し、チケットに記録。
+
+2. **ジョブ管理**
+   - Databricks ジョブの実行状況のモニタリング。
+
+3. **Redmine チケットとの統合**
+   - チケット画面に「Databricksに送信」ボタンを追加。
+   - 処理結果をチケットの履歴に記録。
+
+=== システム要件
+- Redmine バージョン: 4.0 以上
+- Databricks API バージョン: 2.0
+
+=== インストール手順
+1. プラグインを `plugins/` ディレクトリに配置します。
+2. Redmine を再起動します。
+3. 管理画面からプラグインを有効化します。
+
+=== 使用方法
+1. 管理画面で Databricks の API キーを設定します。
+2. チケット画面に移動し、「Databricksに送信」ボタンをクリックします。
+3. Databricks での処理結果がチケットに記録されます。
+
+=== 設定画面
+プラグインの設定は以下の手順で行います。
+
+1. Redmine の管理画面に移動します。
+2. 「プラグイン」セクションから `redmine_databricks` を選択します。
+3. Databricks の API キーとエンドポイント URL を入力し、保存します。
+4. 必要に応じて、Databricks のワークスペース URL やその他の設定を行います。
+
+=== 注意事項
+- Databricks API キーが必要です。環境変数 `DATABRICKS_API_TOKEN` に設定してください。
+- プラグインの動作にはインターネット接続が必要です。
+
+=== ライセンス
+このプラグインは MIT ライセンスの下で提供されます。

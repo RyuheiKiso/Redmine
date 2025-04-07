@@ -1,0 +1,12 @@
+<% content_for :header_tags do %>
+  <%= render_custom_button(@issue) %>
+<% end %>
+
+<%= link_to 'Databricksに送信', send_to_databricks_path(@issue), method: :post, class: 'button' %>
+
+<div id="custom-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <p>ここにモーダルの内容を記載します。</p>
+  </div>
+</div>
